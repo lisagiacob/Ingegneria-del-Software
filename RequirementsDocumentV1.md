@@ -285,7 +285,7 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 
 # System Design
 
-![System Design](system design.pdf)
+![System Design](systemdesign.pdf)
 
 # Deployment Diagram
 
