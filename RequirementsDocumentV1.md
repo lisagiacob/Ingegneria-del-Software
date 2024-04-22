@@ -178,7 +178,7 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       4        | Inserimento delle informazioni tramite form                                |
 |       5        | Conferma dell'inserimento                                                  |
 
-##### Scenario 1.3: Aumento quantità di un prodotto
+##### Scenario 1.3: Aumento/Diminuzoine quantità di un prodotto
 |  Scenario 1.3  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il manager è autenticato                                                   |
