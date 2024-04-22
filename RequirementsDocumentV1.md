@@ -142,7 +142,7 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 
 \<next describe here each use case in the UCD>
 
-### use case da aggiungere: registrazione e login
+### use case da aggiungere: registrazione e login, aggiunta nuovi prodotti, aggiunta prodotti al magazzino
 ### Use case 1, UC1: Gestione dei prodotti
 
 | Actors Involved  |  Manager                                                             |
