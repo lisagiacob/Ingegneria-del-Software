@@ -198,16 +198,17 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       4        | Conferma dell'eliminazione                                                 |
 
 ### Use case 2, UC2: Gestione del carrello
-| Actors Involved  |   Cliente                                                            |
-| :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il cliente è autenticato                                             |
-|  Post condition  | Aggiunta o rimozione articoli dal carrello avvenuta correttamente    |
-| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, aggiunge/rimuove, il sistema aggiorna |
-|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello |
-|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
+| Actors Involved  |   Cliente                                                                |
+| :--------------: | :----------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                                 |
+|  Post condition  | Aggiunta o rimozione articoli dal carrello avvenuta correttamente        |
+| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, 
+                     aggiunge/rimuove, il sistema aggiorna                                    |
+|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello   |
+|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore     |
 
-##### Scenario 1.1: Aggiunta di un articolo al carrello
-|  Scenario 1.1  |                                                                            |
+##### Scenario 2.1: Aggiunta di un articolo al carrello
+|  Scenario 2.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il cliente è autenticato                                                   |
 | Post condition |  L'aggiunta è andato a buon fine                                           |
@@ -217,8 +218,19 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       3        | Selezione tasto per aggiungere un prodotto al carrello                     |
 |       4        | Conferma dell'inserimento                                                  |
 
-##### Scenario 1.2: Rimozione di un articolo dal carrelloo
-|  Scenario 1.2  |                                                                            |
+##### Scenario 2.2: Aumentare quantità di un articolo al carrello
+|  Scenario 2.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato, l'articolo è già nel carrello                    |
+| Post condition | L'aggiunta è andato a buon fine                                            |
+|     Step#      |                                Description                                 |
+|       1        | Accesso al sito                                                            |
+|       2        | Visualizzazione degli articoli                                             |
+|       3        | Selezione tasto per aumentare la quantità del prodotto nel carrello        |
+|       4        | Conferma dell'aumento                                                      |
+
+##### Scenario 2.3: Rimozione di un articolo dal carrelloo
+|  Scenario 2.3  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il cliente è autenticato                                                   |
 | Post condition |  La rimozione è andata a buon fine                                         |
