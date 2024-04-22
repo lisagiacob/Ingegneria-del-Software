@@ -197,7 +197,6 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 | Post condition | L'eliminazione è andata a buon fine                                        |
 =======
 | Post condition | L'eliminazione è andato a buon fine                                        |
->>>>>>> Stashed changes
 |     Step#      |                                Description                                 |
 |       1        | Accesso al pannello di amministrazione                                     |
 |       2        | Visualizzazione dei prodotti                                               |
