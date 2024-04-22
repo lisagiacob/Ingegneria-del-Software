@@ -293,4 +293,4 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 
 # Deployment Diagram
 
-\<describe here deployment diagram >
+![deployment diagram .png](deployment_diagram.png)
