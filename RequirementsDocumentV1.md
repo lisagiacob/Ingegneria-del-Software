@@ -182,7 +182,6 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |  Scenario 1.3  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il manager è autenticato                                                   |
-<<<<<<< Updated upstream
 | Post condition | L'aumento è andato a buon fine                                             |
 |     Step#      |                                Description                                 |
 |       1        | Accesso al pannello di amministrazione                                     |
