@@ -142,7 +142,6 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 
 \<next describe here each use case in the UCD>
 
-### use case da aggiungere: registrazione e login, aggiunta nuovi prodotti, aggiunta prodotti al magazzino
 ### Use case 1, UC1: Gestione dei prodotti
 
 | Actors Involved  |  Manager                                                             |
@@ -155,18 +154,10 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 
 ##### Scenario 1.1: Modifica delle informazioni di un prodotto esistente
 
-\<describe here scenarios instances of UC1>
-
-\<a scenario is a sequence of steps that corresponds to a particular execution of one use case>
-
-\<a scenario is a more formal description of a story>
-
-\<only relevant scenarios should be described>
-
 |  Scenario 1.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il manager è autenticato                                                   |
-| Post condition |  L'aggiornamento è andato a buon fine                                      |
+| Post condition | L'aggiornamento è andato a buon fine                                       |
 |     Step#      |                                Description                                 |
 |       1        | Accesso al pannello di amministrazione                                     |
 |       2        | Visualizzazione dei prodotti                                               |
@@ -178,7 +169,7 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |  Scenario 1.2  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il manager è autenticato                                                   |
-| Post condition |  L'aggiunta è andato a buon fine                                           |
+| Post condition | L'aggiunta è andato a buon fine                                            |
 |     Step#      |                                Description                                 |
 |       1        | Accesso al pannello di amministrazione                                     |
 |       2        | Visualizzazione dei prodotti                                               |
@@ -186,11 +177,22 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       4        | Inserimento delle informazioni tramite form                                |
 |       5        | Conferma dell'inserimento                                                  |
 
-##### Scenario 1.3: Eliminazione di un prodotto
+##### Scenario 1.3: Aumento quantità di un prodotto
 |  Scenario 1.3  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il manager è autenticato                                                   |
-| Post condition |  L'eliminazione è andato a buon fine                                       |
+| Post condition | L'aumento è andato a buon fine                                             |
+|     Step#      |                                Description                                 |
+|       1        | Accesso al pannello di amministrazione                                     |
+|       2        | Visualizzazione dei prodotti                                               |
+|       3        | Selezione tasto per modificare la quantità di un prodotto                  |
+|       5        | Conferma della quantità                                                    |
+
+##### Scenario 1.4: Eliminazione di un prodotto
+|  Scenario 1.4  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato                                                   |
+| Post condition | L'eliminazione è andata a buon fine                                        |
 |     Step#      |                                Description                                 |
 |       1        | Accesso al pannello di amministrazione                                     |
 |       2        | Visualizzazione dei prodotti                                               |
@@ -210,7 +212,7 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |  Scenario 2.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il cliente è autenticato                                                   |
-| Post condition |  L'aggiunta è andato a buon fine                                           |
+| Post condition | L'aggiunta è andata a buon fine                                            |
 |     Step#      |                                Description                                 |
 |       1        | Accesso al sito                                                            |
 |       2        | Visualizzazione degli articoli                                             |
@@ -218,7 +220,7 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       4        | Conferma dell'inserimento                                                  |
 
 ##### Scenario 2.2: Aumentare quantità di un articolo al carrello
-|  Scenario 2.1  |                                                                            |
+|  Scenario 2.2  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il cliente è autenticato, l'articolo è già nel carrello                    |
 | Post condition | L'aggiunta è andato a buon fine                                            |
@@ -239,6 +241,26 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       3        | Selezione del prodotto da rimuovere dal carrello                           |
 |       4        | Conferma della rimozione                                                   |
 
+### Use case 3, UC3: Login e registrazione
+| Actors Involved  |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente non è autenticato                                         |
+|  Post condition  | Il cliente è autenticato                                             |
+| Nominal Scenario | Il cliente accede o crea la sua pagina personale                     |
+|     Variants     | Il cliente non è già registrato                                      |
+|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
+
+##### Scenario 3.1: 
+|  Scenario 3.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente non è registrato                                                |
+| Post condition | Il cliente è autenticato                                                   |
+|     Step#      |                                Description                                 |
+|       1        | Selezione del pulsante login                                               |
+|       2        | Compilazione del form di accesso                                           |
+|       3        | email non registrata                                                       |
+|       4        | Compilazione form registrazione                                            |
+|       5        | Selezione pulsante Registra                                                |
 
 
 # Glossary
