@@ -198,14 +198,13 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       4        | Conferma dell'eliminazione                                                 |
 
 ### Use case 2, UC2: Gestione del carrello
-| Actors Involved  |   Cliente                                                                |
-| :--------------: | :----------------------------------------------------------------------: |
-|   Precondition   | Il cliente è autenticato                                                 |
-|  Post condition  | Aggiunta o rimozione articoli dal carrello avvenuta correttamente        |
-| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, 
-                     aggiunge/rimuove, il sistema aggiorna                                    |
-|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello   |
-|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore     |
+| Actors Involved  |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Aggiunta o rimozione articoli dal carrello avvenuta correttamente    |
+| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, aggiunge/rimuove, il sistema aggiorna |
+|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello |
+|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
 
 ##### Scenario 2.1: Aggiunta di un articolo al carrello
 |  Scenario 2.1  |                                                                            |
