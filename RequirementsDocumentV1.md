@@ -114,10 +114,11 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 | FR3.3 | Modifca del carrello |
 | FR3.4 | Conferma ordine |
 | FR4   | Acquisto |
-| FR4.1 | Checkout e pagamento |
 | FR5   | Autenticazione |
 | FR5.1 | Login |
 | FR5.2 | Logout |
+| FR5.3 | Registrazione |
+| FR6   | Gestione degli Account (delete, modifica) |
 (da aggiungere per V": modifica utente)
 
 
