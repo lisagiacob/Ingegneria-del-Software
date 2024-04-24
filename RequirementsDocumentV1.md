@@ -244,27 +244,68 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |       3        | Selezione del prodotto da rimuovere dal carrello                           |
 |       4        | Conferma della rimozione                                                   |
 
-### Use case 3, UC3: Login e registrazione
+### Use case 3, UC3: Login 
+| Actors Involved  |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente non è autenticato                                         |
+|  Post condition  | Il cliente è autenticato                                             |
+| Nominal Scenario | Il cliente accede alla sua pagina personale                          |
+|     Variants     | Il cliente è già autenticao, credenzili errate                       |
+|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
+
+##### Scenario 3.1: 
+|  Scenario 3.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente non è autenticato                                               |
+| Post condition | Il cliente è autenticato                                                   |
+|     Step#      |                                Description                                 |
+|       1        | Selezione del pulsante login                                               |
+|       2        | Compilazione del form di accesso                                           |
+|       3        | Selezione pulsante Accedi                                                  |
+
+##### Scenario 3.2: 
+|  Scenario 3.2  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente non è autenticato                                               |
+| Post condition | Il cliente è autenticato                                                   |
+|     Step#      |                                Description                                 |
+|       1        | Selezione del pulsante login                                               |
+|       2        | Compilazione del form di accesso                                           |
+|       3        | Selezione pulsante Accedi                                                  |
+|       4        | Warning                                                                    |
+
+### Use case 4, UC3: Registrazione
 | Actors Involved  |   Cliente                                                            |
 | :--------------: | :------------------------------------------------------------------: |
 |   Precondition   | Il cliente non è autenticato                                         |
 |  Post condition  | Il cliente è autenticato                                             |
 | Nominal Scenario | Il cliente accede o crea la sua pagina personale                     |
-|     Variants     | Il cliente non è già registrato                                      |
+|     Variants     | Email già registrata                                                 |
 |    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
 
-##### Scenario 3.1: 
-|  Scenario 3.1  |                                                                            |
+##### Scenario 4.1: 
+|  Scenario 4.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il cliente non è registrato                                                |
 | Post condition | Il cliente è autenticato                                                   |
 |     Step#      |                                Description                                 |
 |       1        | Selezione del pulsante login                                               |
 |       2        | Compilazione del form di accesso                                           |
-|       3        | email non registrata                                                       |
+|       3        | email già registrata                                                       |
 |       4        | Compilazione form registrazione                                            |
 |       5        | Selezione pulsante Registra                                                |
 
+##### Scenario 4.2: 
+|  Scenario 4.3  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente non è registrato                                                |
+| Post condition | Il cliente è autenticato                                                   |
+|     Step#      |                                Description                                 |
+|       1        | Selezione del pulsante login                                               |
+|       2        | Compilazione del form di accesso                                           |
+|       3        | Compilazione form registrazione                                            |
+|       4        | email già registrata                                                       |
+|       5        | Warning                                                                    |
 
 # Glossary
 
