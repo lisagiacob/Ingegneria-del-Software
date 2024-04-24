@@ -118,7 +118,6 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 | FR5.1 | Login |
 | FR5.2 | Logout |
 | FR5.3 | Registrazione |
-| FR6   | Gestione degli Account (delete, modifica) |
 (da aggiungere per V": modifica utente)
 
 
@@ -130,9 +129,9 @@ EZElectronics (read EaSy Electronics) is a software application designed to help
 |   ID    | Type (efficiency, reliability, ..) | Description | Refers to |
 | :-----: | :--------------------------------: | :---------: | :-------: |
 |  NFR1   | Efficienza | Il sistema deve garantire un tempo di risposta di massimo un secondo. Deve garantire meno del 25% delle risorse di cpu. | FR2, FR3, FR4 |
-|  NFR2   | Affidabilità | Il sistema deve essere dispondibile per il 95% del tempo operativo. Il 100% degli errori nel modo corretto fornendo messaggi e codici specifici. | FR1, FR2, FR3, FR4 |
+|  NFR2   | Affidabilità | Gli utenti non devono riferire più di un bag al'anno a testa. Il sistema deve essere dispondibile per il 95% del tempo operativo. Il 100% degli errori nel modo corretto fornendo messaggi e codici specifici. | FR1, FR2, FR3, FR4 |
 |  NFR3   | Sicurezza | Protezione dei dati sensibili degli utenti. Gestione delle transazioni | FR1, FR2, FR3, FR4 |
-|  NFR4   | Usabilità | Facilità d'uso: tempo d'apprendimento tendente a 0. Accessibilità: il sistema deve aderire al 100% degli standard web per l'accessibilità | FR1, FR2, FR3, FR4 |
+|  NFR4   | Usabilità | Gli utenti non devono imparare a usare l sito. Facilità d'uso: tempo d'apprendimento tendente a 0. Accessibilità: il sistema deve aderire al 100% degli standard web per l'accessibilità | FR1, FR2, FR3, FR4 |
 |  NFR5   | Scalabilità | Gestione di un aumento del carico utente maggiore della media senza perdita di prestazioni. | FR2, FR3, FR4 |
 
 
