@@ -21,8 +21,8 @@ Versione: V1 - descrizione di EZElectronics nella sua forma corrente
 - [Requisiti Funzionali e non Funzionali](#requisiti-funzionali-e-non-funzionali)
   - [Requisiti Funzionali](#requisiti-funzionali)
   - [Non Functional Requirements](#non-functional-requirements)
-- [Use case diagram and use cases](#use-case-diagram-and-use-cases)
-  - [Use case diagram](#use-case-diagram)
+- [Casi d'Uso e Diagrammi dei Casi d'Uso](#casi-d'uso-e-diagrammi-dei-casi-d'uso)
+  - [Diagrammi dei Casi d'Uso](#diagrammi-dei-casi-d'uso)
     - [Use case 1, UC1](#use-case-1-uc1)
       - [Scenario 1.1](#scenario-11)
       - [Scenario 1.2](#scenario-12)
@@ -30,7 +30,7 @@ Versione: V1 - descrizione di EZElectronics nella sua forma corrente
     - [Use case 2, UC2](#use-case-2-uc2)
     - [Use case 3, UC3](#use-case-x-uc3)
       - [Scenario 3.1](#scenario-31)
-- [Glossary](#glossary)
+- [Glossario](#glossario)
 - [System Design](#system-design)
 - [Deployment Diagram](#deployment-diagram)
 
@@ -113,8 +113,6 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 
 ## Requisiti non funzionali ##
 
-\<Describe constraints on functional requirements>
-
 |   ID    | Tipo                               | Descrizionw | Riferimenti |
 | :-----: | :--------------------------------: | :---------: | :-------: |
 |  NFR1   | Efficienza | Il sistema deve garantire un tempo di risposta di massimo un secondo. Deve garantire meno del 25% delle risorse di cpu. | FR2, FR3, FR4 |
@@ -124,10 +122,11 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |  NFR5   | Scalabilità | Gestione di un aumento del carico utente maggiore della media senza perdita di prestazioni. | FR2, FR3, FR4 |
 
 
-# Use case diagram and use cases
+# Casi d'Uso e Diagrammi dei Casi d'Uso #
 
-## Use case diagram
+## Diagrammi dei Casi d'Uso ##
 
+## Casi d'Uso ##
 ### Use case 1, UC1: Gestione dei prodotti
 
 | Actors Involved  |  Manager                                                             |
@@ -292,11 +291,7 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |       4        | email già registrata                                                       |
 |       5        | Warning                                                                    |
 
-# Glossary
-
-\<use UML class diagram to define important terms, or concepts in the domain of the application, and their relationships>
-
-\<concepts must be used consistently all over the document, ex in use cases, requirements etc>
+# Glossario
 
 - Manager: utente autorizzatto all'applicazione che gestisce i prodotti all'interno del sistema.
 - Pannello di amministrazione: interfaccia dell'applicazione riservata al manager.
