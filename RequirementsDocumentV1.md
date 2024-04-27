@@ -127,73 +127,39 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ## Diagrammi dei Casi d'Uso ##
 
 ## Casi d'Uso ##
-### Use case 1, UC1: Gestione dei prodotti
+### Use case 1, UC1: Creazione Account
 
 | Actors Involved  |  Manager                                                             |
 | :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il manager è autenticato                                             |
-|  Post condition  | L'aggiornamento è andato a buon fine (codice di risposta di update)  |
+|   Precondition   | L'utente non deve essere già registrato                              |
+|  Post condition  | L'utente è registrato e autenticato                                  |
 | Nominal Scenario | Il manager accede, visualizza i prodotti, modifica le informazioni dei prodotti esistenti oppure aggiunge o elimina prodotti. |
 |     Variants     |                      nessuna variante                                |
-|    Exceptions    | Se l'utente non è autorizzato all'accesso della pagine di gestione dei prodotti, viene mostrato un messaggio d'errore. |
+|    Exceptions    | L'utente annulla: il caso d'uso termina con errore. 
+                     L'utente inserisce un username già esistente: il sistema lo avvisa.  |
 
-##### Scenario 1.1: Modifica delle informazioni di un prodotto esistente
+##### Scenario 1.1: Registrazione e autenticazione dell'utente #####
 
-|  Scenario 1.1  |                                                                            |
-| :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato                                                   |
-| Post condition | L'aggiornamento è andato a buon fine                                       |
-|     Step#      |                                Description                                 |
-|       1        | Accesso al pannello di amministrazione                                     |
-|       2        | Visualizzazione dei prodotti                                               |
-|       3        | Selezione del prodotto da modificare                                       |
-|       4        | Modifica delle informazioni tramite form                                   |
-|       5        | Conferma delle modifiche                                                   |
+|  Scenario 1.1  |                                                                                                       |
+| :------------: | :---------------------------------------------------------------------------------------------------: |
+|  Precondition  | L'utente non deve essere già registrato                                                               |
+| Post condition | L'utente è registrato e autenticato                                                                   |
+|     Step#      |                          Description                                                                  |
+|       1        | L'utente inserisce i dati richiesti (username, nome, cognome, password, ruolo)                        |
+|       2        | L'utente conferma i dati inseri                                                                       |
+|       3        | Il sistema verifica i dati inseriti                                                                   |
+|       4        | Il sistema registra l'utente                                                                          |
+|       4        | Il sistema autentica l'utente                                                                         |
+|       5        | Il caso d'uso termina con successo                                                                    |
 
-##### Scenario 1.2: Aggiunta di un nuovo prodotto
-|  Scenario 1.2  |                                                                            |
-| :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato                                                   |
-| Post condition | L'aggiunta è andato a buon fine                                            |
-|     Step#      |                                Description                                 |
-|       1        | Accesso al pannello di amministrazione                                     |
-|       2        | Visualizzazione dei prodotti                                               |
-|       3        | Selezione tasto per aggiungere un prodotto                                 |
-|       4        | Inserimento delle informazioni tramite form                                |
-|       5        | Conferma dell'inserimento                                                  |
-
-##### Scenario 1.3: Aumento/Diminuzoine quantità di un prodotto
-|  Scenario 1.3  |                                                                            |
-| :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato                                                   |
-| Post condition | L'aumento è andato a buon fine                                             |
-|     Step#      |                                Description                                 |
-|       1        | Accesso al pannello di amministrazione                                     |
-|       2        | Visualizzazione dei prodotti                                               |
-|       3        | Selezione tasto per modificare la quantità di un prodotto                  |
-|       5        | Conferma della quantità                                                    |
-
-##### Scenario 1.4: Eliminazione di un prodotto
-|  Scenario 1.4  |                                                                            |
-| :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato                                                   |
-| Post condition | L'eliminazione è andata a buon fine                                        |
-=======
-| Post condition | L'eliminazione è andato a buon fine                                        |
-|     Step#      |                                Description                                 |
-|       1        | Accesso al pannello di amministrazione                                     |
-|       2        | Visualizzazione dei prodotti                                               |
-|       3        | Selezione del prodotto da eliminare                                        |
-|       4        | Conferma dell'eliminazione                                                 |
-
-### Use case 2, UC2: Gestione del carrello
-| Actors Involved  |   Cliente                                                            |
-| :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il cliente è autenticato                                             |
-|  Post condition  | Aggiunta o rimozione articoli dal carrello avvenuta correttamente    |
-| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, aggiunge/rimuove, il sistema aggiorna |
-|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello |
-|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
+### Use case 2, UC2: Accesso account
+| Attori Coinvolti | Cliente                                                                                             |
+| :--------------: | :-------------------------------------------------------------------------------------------------: |
+|   Precondition   | Il cliente non è autenticato                                                                        |
+|  Post condition  | L'utente è autenticato                                                                              |
+| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, aggiunge/rimuove, il sistema aggiorna   |
+|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello                              |
+|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore                                |
 
 ##### Scenario 2.1: Aggiunta di un articolo al carrello
 |  Scenario 2.1  |                                                                            |
