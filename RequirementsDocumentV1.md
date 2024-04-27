@@ -49,11 +49,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 
 ## Diagramma del contesto
 
-| Attori           |
-| :--------------: |
-| Managers         |
-| Clienti          |
 
+ 
 ## Interfaces
 
 |   Actor   | Interfaccia Logica | Interfaccia Fisica |
