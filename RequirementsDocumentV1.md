@@ -1,25 +1,25 @@
-# Requirements Document - current EZElectronics
+# Documento dei Requisiti - EZElectronics corrente
 
-Date:
+Data:
 
-Version: V1 - description of EZElectronics in CURRENT form (as received by teachers)
+Versione: V1 - descrizione di EZElectronics nella sua forma corrente
 
-| Version number | Change            |
+| Numero della versione | Cambiamenti            |
 | :------------: | :---------------: |
 |        V1      | versione iniziale |
 
-# Contents
+# Contenuti
 
-- [Requirements Document - current EZElectronics](#requirements-document---current-ezelectronics)
-- [Contents](#contents)
-- [Informal description](#informal-description)
+- [Documento dei Requisiti - EZElectronics corrente](#documento-dei-Requisiti---EZElectronics-corrente)
+- [Contentenuti](#contenuti)
+- [Descrizione Informale](#descrizione-informale)
 - [Stakeholders](#stakeholders)
-- [Context Diagram and interfaces](#context-diagram-and-interfaces)
-  - [Context Diagram](#context-diagram)
-  - [Interfaces](#interfaces)
+- [Diagramma del contesto e Interfacce](#diagramma-del-contesto-e-interfacce)
+  - [Diagramma del Contesto](#diagramma-del-contesto)
+  - [Interfacce](#interfacce)
 - [Stories and personas](#stories-and-personas)
-- [Functional and non functional requirements](#functional-and-non-functional-requirements)
-  - [Functional Requirements](#functional-requirements)
+- [Requisiti Funzionali e non Funzionali](#requisiti-funzionali-e-non-funzionali)
+  - [Requisiti Funzionali](#requisiti-funzionali)
   - [Non Functional Requirements](#non-functional-requirements)
 - [Use case diagram and use cases](#use-case-diagram-and-use-cases)
   - [Use case diagram](#use-case-diagram)
@@ -34,114 +34,102 @@ Version: V1 - description of EZElectronics in CURRENT form (as received by teach
 - [System Design](#system-design)
 - [Deployment Diagram](#deployment-diagram)
 
-# Informal description
+# Descrizione Informale
 
-EZElectronics (read EaSy Electronics) is a software application designed to help managers of electronics stores to manage their products and offer them to customers through a dedicated website. Managers can assess the available products, record new ones, and confirm purchases. Customers can see available products, add them to a cart and see the history of their past purchases.
+EZElectronics (letto EaSy Electronics) è una applicazione software fatta per aiutare i manager di piccoli negozi di elettronica a gestire i loro prodotti e a offrirli ai clienti tramite un sito dedicato. I Manager possono vedere i prodotti disponibili, aggiungerne di nuovi e confermare gli acquisti. I Clienti possono vedere i prodotti disponibili, aggiungerli al loro carrello e vedere lo storico dei loro acquisti.
 
 # Stakeholders
 
 | Stakeholder name | Description |
 | :--------------: | :---------: |
-| Manager/Admin | Gestore del negozio di elettronica. Gestisce l'inserzione e la modifica dei prodotti e le operazioni di vendita. |
+| Manager | Gestore del negozio di elettronica. Gestisce l'inserzione e la modifica dei prodotti e le operazioni di vendita. |
 | Cliente | Cliente che visita il sito web. Visualizza i prodotti, gestisce il carrello ed acquista. |
-<!-- | Impiegato | Impiegato del negozio. Gestisce le operazioni di gestione dei prodotti (poteri limitati rispetto al manager). | -->
-# Context Diagram and interfaces
 
-## Context Diagram
+# Diagramma del contesto e Interfacce
 
-\<Define here Context diagram using UML use case diagram>
+## Diagramma del contesto
 
-\<actors are a subset of stakeholders>
+| Attori           |
+| :--------------: |
+| Managers         |
+| Clienti          |
 
 ## Interfaces
 
-\<describe here each interface in the context diagram>
-
-\<GUIs will be described graphically in a separate document>
-
-|   Actor   | Logical Interface | Physical Interface |
-| :-------: | :---------------: | :----------------: |
-| Manager | Interfaccia di gestione completa | Interfaccia Web |
-| Cliente | Interfaccia di navigazione | Interfaccia Web |
-<!-- | Impiegato | Interfaccia di gestione limitata | Interfaccia Web | -->
+|   Actor   | Interfaccia Logica | Interfaccia Fisica |
+| :-------: | :----------------: | :----------------: |
+| Manager   | GUI Manager        | PC/Internet        |
+| Cliente   | GUI Cliente        | PC/Smartphone      |
 
 
 # Stories and personas
 
-\<A Persona is a realistic impersonation of an actor. Define here a few personas and describe in plain text how a persona interacts with the system>
-
-\<Persona is-an-instance-of actor>
 ### Manager
-- Descrizione: Giovanni è il gestore del negozio di elettronica, si occupa della gestione del sito a partire dai servizi di hosting ed è responsabile della parte amministrativa. Inoltre, può accedere al sito per aggiungere, modificare ed eliminare prodotti.
+- Luigi - Manager (40 anni)
+  Lui può creare un account, accedere ad un account esistente o effettuare logout. Può registrare uno o più prodotti di uno stesso modello, smarcarli come venduti o cancellarli. Può visualizzare tutti i prodotti, filtrando eventualmente quelli già venduti o non ancora venduti e/o filtrando per categoria o modello. Può cercare un prodotto per codice identificativo.
 
-- Obiettivi: Offrire e mantenere un servizio di qualità per i clienti e fornire un catalogo aggiornato.
-<!--
-### Impiegato
-- Nome: Francesco 
+  Obiettivi: Offrire e mantenere un servizio di qualità per i clienti e fornire un catalogo aggiornato.
+  
+- Sara - customer (25 anni)
+  Lei può creare un account, accedere ad un account esistente o effettuare logout. Può visualizzare tutti i prodotti, filtrando eventualmente quelli già venduti o non ancora venduti e/o filtrando per categoria o modello. Può cercare un prodotto per codice identificativo. Può gestire un carrello di prodotti: può visualizzarlo, può aggiungere o rimuovere un singolo prodotto, svuotare l'intero carrello e confermare l'acquisto dei prodotti. Può visualizzare la lista degli ordini effettuati.
 
-- Descrizione: Impiegato alle dipendeze del manager.
+  Obiettivi: acquistare prodotti in modo semplice.
 
-- Obiettivi: Gestire al meglio il catalogo secondo le direttive del manager.
--->
-### Cliente
-- Descrizione: Cliente del negozio di elettronica.
+# Requisiti Funzionali e non Funzionali #
 
-- Obiettivi: acquistare prodotti in modo semplice.
-
-
-\<stories will be formalized later as scenarios in use cases>
-
-# Functional and non functional requirements
-
-## Functional Requirements
-
-\<In the form DO SOMETHING, or VERB NOUN, describe high level capabilities of the system>
-
-\<they match to high level use cases>
+## Requisiti Funzionali ##
 
 |  ID   | Description |
-| :---: | :---------: |
-|  FR1  | Gestione del catalogo |
-| FR1.1 | Aggiunta di un prodotto |
-| FR1.2 | Modifica di un prodotto |
-| FR1.3 | Eliminazione di un prodotto |
-| FR2   | Navigazione |
-| FR2.1 | Visualizzazione del catalogo |
-| FR2.2 | Filtro prodotti per categoria |
-| FR3   | Gestione del carrello |
-| FR3.1 | Aggiunta prodotto al carrello |
-| FR3.2 | Visualizzazione del carrello |
-| FR3.3 | Modifca del carrello |
-| FR3.4 | Conferma ordine |
-| FR4   | Acquisto |
-| FR5   | Autenticazione |
-| FR5.1 | Login |
-| FR5.2 | Logout |
-| FR5.3 | Registrazione |
-(da aggiungere per V": modifica utente)
+| --- | --------- |
+|  **FR1**  |      **Gestione Accesso**    |
+|FR1.1| Accesso previo credenziali|
+|FR1.2| Logout utente|
+|FR1.3| Informazioni utente loggato|
+|FR1.4| Registrazione di un nuovo User|
+| --- | --------- |
+|  **FR2**  |    **Funzionalità sugli utenti**   |
+|FR2.2| Restituisce lista di tutti gli utenti|
+|FR2.3| Restituisce una lista di utenti filtrata per ruolo|
+|FR2.4| Restituisce un utente specifico per cognome|
+|FR2.5| Eimina un determinato utente identificato per cognome|
+|FR2.6| Elimina tutti gli utenti registrati **SOLO TESTING**|
+| --- | --------- |
+|**FR3**| **Funzionalità dei prodotti**|
+|FR3.1| Crea un nuovo prodotto|
+|FR3.2| Registra l'arrivo dei prodotti|
+|FR3.3| Segna un prodotto come venduto|
+|FR3.4| Restituisce una lista dei prodotti del database|
+|FR3.5| Restituisce un singolo prodotto da codice specifico|
+|FR3.6| Restituisce i prodotti di una specifica categoria|
+|FR3.7| Restituisce i prodotti di un modello specifico|
+|FR3.8| Elimina un prodotto specifico dal database|
+|FR3.8| Elimina tutti i prodotti dal database **SOLO TESTING**|
+| --- | --------- |
+|**FR4**| **Funzionalità del carrello**|
+|FR4.1| Restituisce il carrello dell'utente loggato|
+|FR4.2| Aggiunge un prodotto al carrello dell'utente loggato|
+|FR4.3| Paga per il carrello dell'utente loggato|
+|FR4.4| Restituisce l'elenco dei pagamenti effettuati dall'utente loggato|
+|FR4.5| Rimuove un prodotto dal carrello dell'utente|
+|FR4.6| Elimina il carrello attuale dell'utente|
+|FR4.7| Elimina tutti i carrelli dell'utente loggato **SOLO TESTING**|
 
-
-
-## Non Functional Requirements
+## Requisiti non funzionali ##
 
 \<Describe constraints on functional requirements>
 
-|   ID    | Type (efficiency, reliability, ..) | Description | Refers to |
+|   ID    | Tipo                               | Descrizionw | Riferimenti |
 | :-----: | :--------------------------------: | :---------: | :-------: |
 |  NFR1   | Efficienza | Il sistema deve garantire un tempo di risposta di massimo un secondo. Deve garantire meno del 25% delle risorse di cpu. | FR2, FR3, FR4 |
-|  NFR2   | Affidabilità | Gli utenti non devono riferire più di un bag al'anno a testa. Il sistema deve essere dispondibile per il 95% del tempo operativo. Il 100% degli errori nel modo corretto fornendo messaggi e codici specifici. | FR1, FR2, FR3, FR4 |
+|  NFR2   | Affidabilità | Gli utenti non devono riferire più di un bag al'anno a testa. Il sistema deve essere dispondibile per il 95% del tempo operativo. Il 100% degli errori devone essere espressi nel modo corretto fornendo messaggi e codici specifici. | FR1, FR2, FR3, FR4 |
 |  NFR3   | Sicurezza | Protezione dei dati sensibili degli utenti. Gestione delle transazioni | FR1, FR2, FR3, FR4 |
-|  NFR4   | Usabilità | Gli utenti non devono imparare a usare l sito. Facilità d'uso: tempo d'apprendimento tendente a 0. Accessibilità: il sistema deve aderire al 100% degli standard web per l'accessibilità | FR1, FR2, FR3, FR4 |
+|  NFR4   | Usabilità | Gli utenti non devono imparare a usare il sito. Facilità d'uso: tempo d'apprendimento tendente a 0. Accessibilità: il sistema deve aderire al 100% degli standard web per l'accessibilità | FR1, FR2, FR3, FR4 |
 |  NFR5   | Scalabilità | Gestione di un aumento del carico utente maggiore della media senza perdita di prestazioni. | FR2, FR3, FR4 |
 
 
 # Use case diagram and use cases
 
 ## Use case diagram
-
-\<define here UML Use case diagram UCD summarizing all use cases, and their relationships>
-
-\<next describe here each use case in the UCD>
 
 ### Use case 1, UC1: Gestione dei prodotti
 
