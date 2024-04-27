@@ -127,24 +127,22 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ## Diagrammi dei Casi d'Uso ##
 
 ## Casi d'Uso ##
-### Use case 1, UC1: Creazione Account
-
+### Use case 1, UC1: Creazione Account ###
 | Actors Involved  |  Manager                                                             |
 | :--------------: | :------------------------------------------------------------------: |
 |   Precondition   | L'utente non deve essere già registrato                              |
 |  Post condition  | L'utente è registrato e autenticato                                  |
-| Nominal Scenario | Il manager accede, visualizza i prodotti, modifica le informazioni dei prodotti esistenti oppure aggiunge o elimina prodotti. |
+| Nominal Scenario | Il cliente si registra e viene salvato e autenticato dal sistema     |
 |     Variants     |                      nessuna variante                                |
 |    Exceptions    | L'utente annulla: il caso d'uso termina con errore. 
                      L'utente inserisce un username già esistente: il sistema lo avvisa.  |
 
-##### Scenario 1.1: Registrazione e autenticazione dell'utente #####
-
+##### Scenario 1.1 #####
 |  Scenario 1.1  |                                                                                                       |
 | :------------: | :---------------------------------------------------------------------------------------------------: |
 |  Precondition  | L'utente non deve essere già registrato                                                               |
 | Post condition | L'utente è registrato e autenticato                                                                   |
-|     Step#      |                          Description                                                                  |
+|     Step#      |                          Descrizione                                                                  |
 |       1        | L'utente inserisce i dati richiesti (username, nome, cognome, password, ruolo)                        |
 |       2        | L'utente conferma i dati inseri                                                                       |
 |       3        | Il sistema verifica i dati inseriti                                                                   |
@@ -152,110 +150,247 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |       4        | Il sistema autentica l'utente                                                                         |
 |       5        | Il caso d'uso termina con successo                                                                    |
 
-### Use case 2, UC2: Accesso account
+##### Scenario 1.2 #####
+|  Scenario 1.2  |                                                                                                       |
+| :------------: | :---------------------------------------------------------------------------------------------------: |
+|  Precondition  | L'utente non deve essere già registrato                                                               |
+| Post condition | L'utente è registrato e autenticato                                                                   |
+|     Step#      |                          Descrizione                                                                  |
+|       1        | L'utente inserisce i dati richiesti (username, nome, cognome, password, ruolo)                        |
+|       2        | L'utente conferma i dati inseri                                                                       |
+|       3        | Il sistema verifica i dati inseriti e trova che lo user name è già esistente                          |
+|       4        | Il sistema avvista l'utente dell'errroe                                                               |
+|       4        | L'utente sceglie un nuovo user name, che non è già esistente                                          |
+|       4        | Il sistema autentica l'utente                                                                         |
+|       5        | Il caso d'uso termina con successo                                                                    |
+
+##### Scenario 1.3 #####
+|  Scenario 1.3  |                                                                                                       |
+| :------------: | :---------------------------------------------------------------------------------------------------: |
+|  Precondition  | L'utente non deve essere già registrato                                                               |
+| Post condition | L'utente è registrato e autenticato                                                                   |
+|     Step#      |                          Descrizione                                                                  |
+|       1        | L'utente inserisce i dati richiesti (username, nome, cognome, password, ruolo)                        |
+|       2        | L'utente annulla                                                                                      |
+|       3        | Il caso d'uso termina con successo                                                                    |
+
+### Use case 2, UC2: Accesso account ###
 | Attori Coinvolti | Cliente                                                                                             |
 | :--------------: | :-------------------------------------------------------------------------------------------------: |
 |   Precondition   | Il cliente non è autenticato                                                                        |
 |  Post condition  | L'utente è autenticato                                                                              |
-| Nominal Scenario | Il cliente accede al suo carrello, visualizza gli articoli, aggiunge/rimuove, il sistema aggiorna   |
-|     Variants     | Il cliente modifica della quantità di un prodotto / svuota il carrello                              |
-|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore                                |
+| Nominal Scenario | Il cliente accede al suo account                                                                    |
+|     Variants     |                                    nessuna variante                                                 |
+|    Exceptions    | Se il cliente non è registrato viene mostrato un messaggio d'errore                                 |
 
-##### Scenario 2.1: Aggiunta di un articolo al carrello
+##### Scenario 2.1 #####
 |  Scenario 2.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente è autenticato                                                   |
-| Post condition | L'aggiunta è andata a buon fine                                            |
-|     Step#      |                                Description                                 |
-|       1        | Accesso al sito                                                            |
-|       2        | Visualizzazione degli articoli                                             |
-|       3        | Selezione tasto per aggiungere un prodotto al carrello                     |
-|       4        | Conferma dell'inserimento                                                  |
+|  Precondition  | Il cliente non è autenticato                                               |
+| Post condition | L'utente è autenticato                                                     |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce i dati richiesti (username, password)                   |
+|       2        | L'utente conferma i dati inseriti                                          |
+|       3        | Il sistema verifica i dati inseriti                                        |
+|       3        | Il sistema autentica l'utente                                              |
+|       4        | Il caso d'uso termina con successo                                         |
 
-##### Scenario 2.2: Aumentare quantità di un articolo al carrello
+
+##### Scenario 2.2 #####
 |  Scenario 2.2  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente è autenticato, l'articolo è già nel carrello                    |
-| Post condition | L'aggiunta è andato a buon fine                                            |
-|     Step#      |                                Description                                 |
-|       1        | Accesso al sito                                                            |
-|       2        | Visualizzazione degli articoli                                             |
-|       3        | Selezione tasto per aumentare la quantità del prodotto nel carrello        |
-|       4        | Conferma dell'aumento                                                      |
+|  Precondition  | Il cliente non è autenticato                                               |
+| Post condition | L'utente è autenticato                                                     |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce i dati richiesti (username, password)                   |
+|       2        | L'utente conferma i dati inseriti                                          |
+|       3        | Il sistema verifica i dati inseriti                                        |
+|       3        | Il sistema mostra un errore all'utente                                     |
+|       4        | Il caso d'uso termina con errore                                           |
 
-##### Scenario 2.3: Rimozione di un articolo dal carrelloo
-|  Scenario 2.3  |                                                                            |
-| :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente è autenticato                                                   |
-| Post condition |  La rimozione è andata a buon fine                                         |
-|     Step#      |                                Description                                 |
-|       1        | Accesso alla sezione del carrello del sito                                 |
-|       2        | Visualizzazione dei prodotti                                               |
-|       3        | Selezione del prodotto da rimuovere dal carrello                           |
-|       4        | Conferma della rimozione                                                   |
-
-### Use case 3, UC3: Login 
-| Actors Involved  |   Cliente                                                            |
+### Use case 3, UC3: Logout
+| Attori Coinvolti |   Cliente                                                            |
 | :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il cliente non è autenticato                                         |
-|  Post condition  | Il cliente è autenticato                                             |
-| Nominal Scenario | Il cliente accede alla sua pagina personale                          |
-|     Variants     | Il cliente è già autenticao, credenzili errate                       |
-|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Il cliente non è autenticato                                         |
+| Nominal Scenario | Il cliente si disconnette dal suo profilo                            |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Nessuna                                                              |
 
 ##### Scenario 3.1: 
 |  Scenario 3.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente non è autenticato                                               |
-| Post condition | Il cliente è autenticato                                                   |
-|     Step#      |                                Description                                 |
-|       1        | Selezione del pulsante login                                               |
-|       2        | Compilazione del form di accesso                                           |
-|       3        | Selezione pulsante Accedi                                                  |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il cliente non è autenticato                                               |
+|     Step#      |                                Descrizione                                 |
+|       1        | Selezione del pulsante logout                                              |
+|       2        | L'utente conferma di voler effettuare il logout                            |
+|       3        | Il sistema effettua il logout                                              |
+|       4        | Il caso d'uso termina con successo                                         |
 
-##### Scenario 3.2: 
-|  Scenario 3.2  |                                                                            |
-| :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente non è autenticato                                               |
-| Post condition | Il cliente è autenticato                                                   |
-|     Step#      |                                Description                                 |
-|       1        | Selezione del pulsante login                                               |
-|       2        | Compilazione del form di accesso                                           |
-|       3        | Selezione pulsante Accedi                                                  |
-|       4        | Warning                                                                    |
-
-### Use case 4, UC3: Registrazione
-| Actors Involved  |   Cliente                                                            |
+### Use case 4, UC4: Visualizzazione dei dati dell'account
+| Attori Coinvolti |   Cliente                                                            |
 | :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il cliente non è autenticato                                         |
-|  Post condition  | Il cliente è autenticato                                             |
-| Nominal Scenario | Il cliente accede o crea la sua pagina personale                     |
-|     Variants     | Email già registrata                                                 |
-|    Exceptions    | Se il cliente non è autenticato viene mostrato un messaggio d'errore |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Nessuna                                                              |
+| Nominal Scenario | Il cliente si visualizza i dati del suo profilo                      |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Nessuna                                                              |
 
-##### Scenario 4.1: 
+##### Scenario 4.1: #####
 |  Scenario 4.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente non è registrato                                                |
-| Post condition | Il cliente è autenticato                                                   |
-|     Step#      |                                Description                                 |
-|       1        | Selezione del pulsante login                                               |
-|       2        | Compilazione del form di accesso                                           |
-|       3        | email già registrata                                                       |
-|       4        | Compilazione form registrazione                                            |
-|       5        | Selezione pulsante Registra                                                |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra i dati dell'utente                                       |
+|       2        | Il caso d'uso termina con successo                                         |
 
-##### Scenario 4.2: 
-|  Scenario 4.3  |                                                                            |
+### Use case 5, UC5: Visualizzazione dei prodotti nel carrello ###
+| Actors Coinvolti |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Nessuna                                                              |
+| Nominal Scenario | Il cliente visualizza i dati del suo profilo                         |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Nessuna                                                              |
+
+##### Scenario 5.1: #####
+|  Scenario 5.1  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il cliente non è registrato                                                |
-| Post condition | Il cliente è autenticato                                                   |
-|     Step#      |                                Description                                 |
-|       1        | Selezione del pulsante login                                               |
-|       2        | Compilazione del form di accesso                                           |
-|       3        | Compilazione form registrazione                                            |
-|       4        | email già registrata                                                       |
-|       5        | Warning                                                                    |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra i prodotti presenti nel carrello                         |
+|       2        | Il caso d'uso termina con successo                                         |
+
+### Use case 6, UC6: Aggiunta del prodotto al carrello ###
+| Attori Coinvolti |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Il prodotto è stato aggiunto al carrello                             |
+| Nominal Scenario | Il cliente aggiunge un prodottto al carrello                         |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | L'utente annulla: il caso d'uso termina con errore                   |
+
+##### Scenario 6.1: #####
+|  Scenario 6.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il prodotto è stato aggiunto al carrello                                   |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente seleziona un prodotto                                             |
+|       2        | L'utente conferma di voler aggiungere il prodotto al carrello              |
+|       3        | Il sistema aggiunge il prodotto al carrello                                |
+|       4        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 6.2: #####
+|  Scenario 6.2  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il prodotto è stato aggiunto al carrello                                   |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente seleziona un prodotto                                             |
+|       2        | L'utente annulla                                                           |
+|       3        | Il caso d'uso termina con errore                                           |
+
+### Use case 7, UC7: Rimozione del prodotto dal carrello ###
+| Attori Coinvolti |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Il prodotto è stato rimosso dal carrello                             |
+| Nominal Scenario | Il cliente rimuove un prodottto dal carrello                         |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | L'utente annulla: il caso d'uso termina con errore                   |
+
+##### Scenario 7.1: #####
+|  Scenario 7.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il prodotto è stato rimosso dal carrello                                   |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione prodotti già presenti nel carrello                     |
+|       2        | L'utente seleziona un prodotto                                             |
+|       3        | L'utente seleziona il pulsante rimuovi                                     |
+|       4        | L'utente conferma di voler rimuovere il prodotto dal carrello              |
+|       5        | Il sistema rimuove il prodotto dal carrello                                |
+|       6        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 7.2: #####
+|  Scenario 7.2  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il prodotto è stato aggiunto al carrello                                   |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente seleziona un prodotto                                             |
+|       2        | L'utente seleziona il pulsante rimuovi                                     |
+|       3        | L'utente annulla                                                           |
+|       4        | Il caso d'uso termina con errore                                           |
+
+### Use case 8, UC8: Rimozione di tutti i prodotti dal carrello ###
+| Attori Coinvolti |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Il prodotto è vuoto                                                  |
+| Nominal Scenario | Il cliente rimuove tutti i prodotti dal carrello                     |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | L'utente annulla: il caso d'uso termina con errore                   |
+
+##### Scenario 8.1: #####
+|  Scenario 8.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il prodotto è stato rimosso dal carrello                                   |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione prodotti già presenti nel carrello                     |
+|       2        | L'utente seleziona il pulsante svuota                                      |
+|       3        | L'utente conferma di voler svuotare il carrello                            |
+|       4        | Il sistema rimuove tutti i prodotti dal carrello                           |
+|       5        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 8.2: #####
+|  Scenario 8.2  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Il prodotto è stato aggiunto al carrello                                   |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente seleziona un prodotto                                             |
+|       2        | L'utente seleziona il pulsante svuota                                      |
+|       3        | L'utente annulla                                                           |
+|       4        | Il caso d'uso termina con errore                                           |
+
+### Use case 9, UC9: Conferma dell'acquisto ###
+| Attori Coinvolti |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Il prodotto è vuoto                                                  |
+| Nominal Scenario | Il cliente rimuove tutti i prodotti dal carrello                     |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | L'utente annulla: il caso d'uso termina con errore                   |
+
+##### Scenario 9.1: #####
+|  Scenario 9.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | L'ordine è stato confermato                                                |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione prodotti già presenti nel carrello                     |
+|       2        | L'utente seleziona il pulsante acquista                                    |
+|       3        | L'utente conferma di voler acquistare i prodotti nel carrello              |
+|       4        | Il sistema registra l'ordine                                               |
+|       5        | Il sistema svuota il carrello                                              |
+|       6        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 9.1: #####
+|  Scenario 9.1  |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | L'ordine è stato confermato                                                |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione prodotti già presenti nel carrello                     |
+|       2        | L'utente seleziona il pulsante acquista                                    |
+|       3        | L'utente annulla                                                           |
+|       6        | Il caso d'uso termina con errore                                           |
 
 # Glossario
 
