@@ -489,7 +489,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |       3        | Il sistema mostra la lista filtrata                                        |
 |       4        | Il caso d'uso termina con successo                                         |
 
-|  Scenario 11.2 |                                                                            |
+##### Scenario 11.4: #####
+|  Scenario 11.4 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | L'utente è autenticato                                                     |
 | Post condition | Nessuna                                                                    |
@@ -520,20 +521,20 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ### Use case 13, UC13: Registrazione di un prodotto ###
 | Attori Coinvolti | Manager                                                              |
 | :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il manager è autenticato 
-                     Il prodotto non esiste nel sistema                                   |
+|   Precondition   | Il manager è autenticato                                             |
+|                  | Il prodotto non esiste nel sistema                                   |
 |  Post condition  | Il prodotto è stato registrato                                       |
 | Nominal Scenario | Il manager registra un nuovo prodotto                                |
 |     Variants     |                     nessuna variante                                 |
-|    Exceptions    | Il manager annulla 
-                     Il prodotto esiste già nel sistema
-                     La data di arrivo è futura                                           |
+|    Exceptions    | Il manager annulla                                                   |
+|                  | Il prodotto esiste già nel sistema                                   |
+|                  | La data di arrivo è futura                                           |
 
 ##### Scenario 13.1: #####
 |  Scenario 13.1 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato 
-                   Il prodotto non esiste nel sistema                                         |
+|  Precondition  | Il manager è autenticato                                                   |
+|                |  Il prodotto non esiste nel sistema                                        |
 |  Post condition| Il prodotto è stato registrato                                             |
 |     Step#      |                                Descrizione                                 |
 |       1        | L'utente inserisce i dati del prodotto                                     |
@@ -544,8 +545,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ##### Scenario 13.2: #####
 |  Scenario 13.2 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato 
-                   Il prodotto non esiste nel sistema                                         |
+|  Precondition  | Il manager è autenticato                                                   |
+|                | Il prodotto non esiste nel sistema                                         |
 |  Post condition| Il prodotto è stato registrato                                             |
 |     Step#      |                                Descrizione                                 |
 |       1        | L'utente inserisce i dati del prodotto                                     |
@@ -555,8 +556,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ##### Scenario 13.3: #####
 |  Scenario 13.3 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato 
-                   Il prodotto non esiste nel sistema                                         |
+|  Precondition  | Il manager è autenticato                                                   |
+|                | Il prodotto non esiste nel sistema                                         |
 |  Post condition| Il prodotto è stato registrato                                             |
 |     Step#      |                                Descrizione                                 |
 |       1        | L'utente inserisce i dati del prodotto                                     |
@@ -567,8 +568,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ##### Scenario 13.4: #####
 |  Scenario 13.4 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato 
-                   Il prodotto non esiste nel sistema                                         |
+|  Precondition  | Il manager è autenticato                                                   |
+|                | Il prodotto non esiste nel sistema                                         |
 |  Post condition| Il prodotto è stato registrato                                             |
 |     Step#      |                                Descrizione                                 |
 |       1        | L'utente inserisce i dati del prodotto                                     |
@@ -579,8 +580,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ### Use case 14, UC14: Registrazione vendita ###
 | Attori Coinvolti | Manager                                                              |
 | :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il manager è autenticato 
-                     Il prodotto è stato venduto                                          |
+|   Precondition   | Il manager è autenticato                                             |
+|                  |  Il prodotto è stato venduto                                         |
 |  Post condition  | La vendita è stata registrata                                        |
 | Nominal Scenario | Il manager registra la vendita di un prodotto                        |
 |     Variants     |                     nessuna variante                                 |
@@ -589,8 +590,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ##### Scenario 14.1: #####
 |  Scenario 14.1 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato 
-                   Il prodotto non esiste nel sistema                                         |
+|  Precondition  | Il manager è autenticato                                                   |
+|                | Il prodotto non esiste nel sistema                                         |
 |  Post condition| Il prodotto è stato registrato                                             |
 |     Step#      |                                Descrizione                                 |
 |       1        | UC: Visualizzazione lista prodotti                                         |
@@ -602,8 +603,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ##### Scenario 14.2: #####
 |  Scenario 14.2 |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
-|  Precondition  | Il manager è autenticato 
-                   Il prodotto non esiste nel sistema                                         |
+|  Precondition  | Il manager è autenticato                                                   |
+|                | Il prodotto non esiste nel sistema                                         |
 |  Post condition| Il prodotto è stato registrato                                             |
 |     Step#      |                                Descrizione                                 |
 |       1        | UC: Visualizzazione lista prodotti                                         |
@@ -614,8 +615,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 ### Use case 15, UC15: Cancellazione di un prodotto ###
 | Attori Coinvolti | Manager                                                              |
 | :--------------: | :------------------------------------------------------------------: |
-|   Precondition   | Il manager è autenticato 
-                     Il prodotto è stato venduto                                          |
+|   Precondition   | Il manager è autenticato                                             |
+|                  | Il prodotto è stato venduto                                          |
 |  Post condition  | La vendita è stata registrata                                        |
 | Nominal Scenario | Il manager registra la vendita di un prodotto                        |
 |     Variants     |                     nessuna variante                                 |
