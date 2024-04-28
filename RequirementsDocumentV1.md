@@ -174,7 +174,7 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 | Nominal Scenario | Il cliente si registra e viene salvato e autenticato dal sistema     |
 |     Variants     |                      nessuna variante                                |
 |    Exceptions    | L'utente annulla: il caso d'uso termina con errore. 
-                     L'utente inserisce un username già esistente: il sistema lo avvisa.  |
+                   |  L'utente inserisce un username già esistente: il sistema lo avvisa.  |
 
 ##### Scenario 1.1 #####
 |  Scenario 1.1  |                                                                                                       |
