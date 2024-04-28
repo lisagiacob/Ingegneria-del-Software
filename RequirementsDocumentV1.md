@@ -10,26 +10,65 @@ Versione: V1 - descrizione di EZElectronics nella sua forma corrente
 
 # Contenuti
 
-- [Documento dei Requisiti - EZElectronics corrente](#documento-dei-Requisiti---EZElectronics-corrente)
-- [Contentenuti](#contenuti)
+- [Documento dei Requisiti - EZElectronics corrente](#documento-dei-requisiti---ezelectronics-corrente)
+- [Contenuti](#contenuti)
 - [Descrizione Informale](#descrizione-informale)
 - [Stakeholders](#stakeholders)
 - [Diagramma del contesto e Interfacce](#diagramma-del-contesto-e-interfacce)
-  - [Diagramma del Contesto](#diagramma-del-contesto)
-  - [Interfacce](#interfacce)
+  - [Diagramma del contesto](#diagramma-del-contesto)
+  - [Interfaces](#interfaces)
 - [Stories and personas](#stories-and-personas)
+    - [Manager](#manager)
 - [Requisiti Funzionali e non Funzionali](#requisiti-funzionali-e-non-funzionali)
   - [Requisiti Funzionali](#requisiti-funzionali)
-  - [Non Functional Requirements](#non-functional-requirements)
-- [Casi d'Uso e Diagrammi dei Casi d'Uso](#casi-d'uso-e-diagrammi-dei-casi-d'uso)
-  - [Diagrammi dei Casi d'Uso](#diagrammi-dei-casi-d'uso)
-    - [Use case 1, UC1](#use-case-1-uc1)
-      - [Scenario 1.1](#scenario-11)
-      - [Scenario 1.2](#scenario-12)
-      - [Scenario 1.3](#scenario-13)
-    - [Use case 2, UC2](#use-case-2-uc2)
-    - [Use case 3, UC3](#use-case-x-uc3)
-      - [Scenario 3.1](#scenario-31)
+  - [Requisiti non funzionali](#requisiti-non-funzionali)
+- [Casi d'Uso e Diagrammi dei Casi d'Uso](#casi-duso-e-diagrammi-dei-casi-duso)
+  - [Diagrammi dei Casi d'Uso](#diagrammi-dei-casi-duso)
+  - [Casi d'Uso](#casi-duso)
+    - [Use case 1, UC1: Creazione Account](#use-case-1-uc1-creazione-account)
+        - [Scenario 1.1](#scenario-11)
+        - [Scenario 1.2](#scenario-12)
+        - [Scenario 1.3](#scenario-13)
+    - [Use case 2, UC2: Accesso account](#use-case-2-uc2-accesso-account)
+        - [Scenario 2.1](#scenario-21)
+        - [Scenario 2.2](#scenario-22)
+    - [Use case 3, UC3: Logout](#use-case-3-uc3-logout)
+        - [Scenario 3.1:](#scenario-31)
+    - [Use case 4, UC4: Visualizzazione dei dati dell'account](#use-case-4-uc4-visualizzazione-dei-dati-dellaccount)
+        - [Scenario 4.1:](#scenario-41)
+    - [Use case 5, UC5: Visualizzazione dei prodotti nel carrello](#use-case-5-uc5-visualizzazione-dei-prodotti-nel-carrello)
+        - [Scenario 5.1:](#scenario-51)
+    - [Use case 6, UC6: Aggiunta del prodotto al carrello](#use-case-6-uc6-aggiunta-del-prodotto-al-carrello)
+        - [Scenario 6.1:](#scenario-61)
+        - [Scenario 6.2:](#scenario-62)
+    - [Use case 7, UC7: Rimozione del prodotto dal carrello](#use-case-7-uc7-rimozione-del-prodotto-dal-carrello)
+        - [Scenario 7.1:](#scenario-71)
+        - [Scenario 7.2:](#scenario-72)
+    - [Use case 8, UC8: Rimozione di tutti i prodotti dal carrello](#use-case-8-uc8-rimozione-di-tutti-i-prodotti-dal-carrello)
+        - [Scenario 8.1:](#scenario-81)
+        - [Scenario 8.2:](#scenario-82)
+    - [Use case 9, UC9: Conferma dell'acquisto](#use-case-9-uc9-conferma-dellacquisto)
+        - [Scenario 9.1:](#scenario-91)
+        - [Scenario 9.2:](#scenario-92)
+    - [Use case 10, UC10: Visualizzazione ordini effettuati](#use-case-10-uc10-visualizzazione-ordini-effettuati)
+        - [Scenario 10.1:](#scenario-101)
+    - [Use case 11, UC11: Visualizzazione della lista dei prodotti](#use-case-11-uc11-visualizzazione-della-lista-dei-prodotti)
+        - [Scenario 11.1:](#scenario-111)
+        - [Scenario 11.2:](#scenario-112)
+        - [Scenario 11.3:](#scenario-113)
+    - [Use case 12, UC12: Ricerca di un prodotto tramite codice identificativo](#use-case-12-uc12-ricerca-di-un-prodotto-tramite-codice-identificativo)
+        - [Scenario 12.1:](#scenario-121)
+    - [Use case 13, UC13: Registrazione di un prodotto](#use-case-13-uc13-registrazione-di-un-prodotto)
+        - [Scenario 13.1:](#scenario-131)
+        - [Scenario 13.2:](#scenario-132)
+        - [Scenario 13.3:](#scenario-133)
+        - [Scenario 13.4:](#scenario-134)
+    - [Use case 14, UC14: Registrazione vendita](#use-case-14-uc14-registrazione-vendita)
+        - [Scenario 14.1:](#scenario-141)
+        - [Scenario 14.2:](#scenario-142)
+    - [Use case 15, UC15: Cancellazione di un prodotto](#use-case-15-uc15-cancellazione-di-un-prodotto)
+        - [Scenario 15.1:](#scenario-151)
+        - [Scenario 15.2:](#scenario-152)
 - [Glossario](#glossario)
 - [System Design](#system-design)
 - [Deployment Diagram](#deployment-diagram)
@@ -364,7 +403,7 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 | :--------------: | :------------------------------------------------------------------: |
 |   Precondition   | Il cliente è autenticato                                             |
 |  Post condition  | Il prodotto è vuoto                                                  |
-| Nominal Scenario | Il cliente rimuove tutti i prodotti dal carrello                     |
+| Nominal Scenario | Il cliente conferma l'acquisto                                       |
 |     Variants     |                     nessuna variante                                 |
 |    Exceptions    | L'utente annulla: il caso d'uso termina con errore                   |
 
@@ -381,8 +420,8 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |       5        | Il sistema svuota il carrello                                              |
 |       6        | Il caso d'uso termina con successo                                         |
 
-##### Scenario 9.1: #####
-|  Scenario 9.1  |                                                                            |
+##### Scenario 9.2: #####
+|  Scenario 9.2  |                                                                            |
 | :------------: | :------------------------------------------------------------------------: |
 |  Precondition  | Il cliente è autenticato                                                   |
 | Post condition | L'ordine è stato confermato                                                |
@@ -391,6 +430,219 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |       2        | L'utente seleziona il pulsante acquista                                    |
 |       3        | L'utente annulla                                                           |
 |       6        | Il caso d'uso termina con errore                                           |
+
+### Use case 10, UC10: Visualizzazione ordini effettuati ###
+| Attori Coinvolti |   Cliente                                                            |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il cliente è autenticato                                             |
+|  Post condition  | Nessuna                                                              |
+| Nominal Scenario | Il cliente visualizza tutti gli ordini effettuati                    |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Nessuna                                                              |
+
+##### Scenario 10.1: #####
+|  Scenario 10.1 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il cliente è autenticato                                                   |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra la lista degli ordini effettuati                         |
+|       2        | Il caso d'uso termina con successo                                         |
+
+### Use case 11, UC11: Visualizzazione della lista dei prodotti ###
+| Attori Coinvolti | Cliente o Manager                                                    |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | L'utente è autenticato                                               |
+|  Post condition  | Nessuna                                                              |
+| Nominal Scenario | L'utente visualizza tutti gli ordini effettuati                      |
+|     Variants     | Filtri                                                               |
+|    Exceptions    | Nessun prodotto presente                                             |
+
+##### Scenario 11.1: #####
+|  Scenario 11.1 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | L'utente è autenticato                                                     |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra la lista dei prodotti                                    |
+|       2        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 11.2: #####
+|  Scenario 11.2 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | L'utente è autenticato                                                     |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra la lista dei prodotti                                    |
+|       2        | L'utente può filtrare la lista per prodotti venduti/non venduti            |
+|       3        | Il sistema mostra la lista filtrata                                        |
+|       4        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 11.3: #####
+|  Scenario 11.3 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | L'utente è autenticato                                                     |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra la lista dei prodotti                                    |
+|       2        | L'utente può filtrare la lista per categoria oppure per modello            |
+|       3        | Il sistema mostra la lista filtrata                                        |
+|       4        | Il caso d'uso termina con successo                                         |
+
+|  Scenario 11.2 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | L'utente è autenticato                                                     |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | Il sistema mostra la lista dei prodotti                                    |
+|       2        | Il sistema comunica che non ci sono prodotti disponibili                   |
+|       3        | Il caso d'uso termina con successo                                         |
+
+### Use case 12, UC12: Ricerca di un prodotto tramite codice identificativo ###
+| Attori Coinvolti | Cliente o Manager                                                    |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | L'utente è autenticato                                               |
+|  Post condition  | Nessuna                                                              |
+| Nominal Scenario | L'utente cerca un prodotto per codice identificativo                 |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Il prodotto non esiste                                               |
+
+##### Scenario 12.1: #####
+|  Scenario 12.1 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | L'utente è autenticato                                                     |
+| Post condition | Nessuna                                                                    |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce il codice identificativo del prodotto                   |
+|       2        | Il sistema mostra il prodotto                                              |
+|       3        | Il caso d'uso termina con successo                                         |
+
+### Use case 13, UC13: Registrazione di un prodotto ###
+| Attori Coinvolti | Manager                                                              |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il manager è autenticato 
+                     Il prodotto non esiste nel sistema                                   |
+|  Post condition  | Il prodotto è stato registrato                                       |
+| Nominal Scenario | Il manager registra un nuovo prodotto                                |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Il manager annulla 
+                     Il prodotto esiste già nel sistema
+                     La data di arrivo è futura                                           |
+
+##### Scenario 13.1: #####
+|  Scenario 13.1 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato 
+                   Il prodotto non esiste nel sistema                                         |
+|  Post condition| Il prodotto è stato registrato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce i dati del prodotto                                     |
+|       2        | L'utente conferma i dati inseriti                                          |
+|       3        | Il sistema verifica i dati inseriti                                        |
+|       4        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 13.2: #####
+|  Scenario 13.2 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato 
+                   Il prodotto non esiste nel sistema                                         |
+|  Post condition| Il prodotto è stato registrato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce i dati del prodotto                                     |
+|       2        | L'utente annulla                                                           |
+|       3        | Il caso d'uso termina con errore                                           |
+
+##### Scenario 13.3: #####
+|  Scenario 13.3 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato 
+                   Il prodotto non esiste nel sistema                                         |
+|  Post condition| Il prodotto è stato registrato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce i dati del prodotto                                     |
+|       2        | L'utente conferma i dati inseriti                                          |
+|       3        | Il prodotto esiste già                                                     |
+|       4        | Il caso d'uso termina con errore                                           |
+
+##### Scenario 13.4: #####
+|  Scenario 13.4 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato 
+                   Il prodotto non esiste nel sistema                                         |
+|  Post condition| Il prodotto è stato registrato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | L'utente inserisce i dati del prodotto                                     |
+|       2        | L'utente conferma i dati inseriti                                          |
+|       3        | La data di arrivo è futura                                                 |
+|       4        | Il caso d'uso termina con errore                                           |
+
+### Use case 14, UC14: Registrazione vendita ###
+| Attori Coinvolti | Manager                                                              |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il manager è autenticato 
+                     Il prodotto è stato venduto                                          |
+|  Post condition  | La vendita è stata registrata                                        |
+| Nominal Scenario | Il manager registra la vendita di un prodotto                        |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Il manager annulla                                                   |
+
+##### Scenario 14.1: #####
+|  Scenario 14.1 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato 
+                   Il prodotto non esiste nel sistema                                         |
+|  Post condition| Il prodotto è stato registrato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione lista prodotti                                         |
+|       2        | L'utente seleziona un prodotto                                             |
+|       3        | L'utente conferma di voler registrare la vendita del prodotto              |
+|       4        | Il sistema registra il prodotto come venduto                               |
+|       5        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 14.2: #####
+|  Scenario 14.2 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato 
+                   Il prodotto non esiste nel sistema                                         |
+|  Post condition| Il prodotto è stato registrato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione lista prodotti                                         |
+|       2        | L'utente seleziona un prodotto                                             |
+|       3        | L'utente annulla                                                           |
+|       4        | Il caso d'uso termina con errore                                           |
+
+### Use case 15, UC15: Cancellazione di un prodotto ###
+| Attori Coinvolti | Manager                                                              |
+| :--------------: | :------------------------------------------------------------------: |
+|   Precondition   | Il manager è autenticato 
+                     Il prodotto è stato venduto                                          |
+|  Post condition  | La vendita è stata registrata                                        |
+| Nominal Scenario | Il manager registra la vendita di un prodotto                        |
+|     Variants     |                     nessuna variante                                 |
+|    Exceptions    | Il manager annulla                                                   |
+
+##### Scenario 15.1: #####
+|  Scenario 15.1 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato                                                   |
+|  Post condition| Il prodotto è stato cancellato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione lista prodotti                                         |
+|       2        | L'utente seleziona un prodotto                                             |
+|       3        | L'utente conferma di voler cancellare il prodotto                          |
+|       4        | Il sistema cancella il prodotto                                            |
+|       5        | Il caso d'uso termina con successo                                         |
+
+##### Scenario 15.2: #####
+|  Scenario 15.2 |                                                                            |
+| :------------: | :------------------------------------------------------------------------: |
+|  Precondition  | Il manager è autenticato                                                   |
+|  Post condition| Il prodotto è stato cancellato                                             |
+|     Step#      |                                Descrizione                                 |
+|       1        | UC: Visualizzazione lista prodotti                                         |
+|       2        | L'utente seleziona un prodotto                                             |
+|       4        | Il sistema annulla                                                         |
+|       5        | Il caso d'uso termina con errore                                           |
 
 # Glossario
 
