@@ -56,6 +56,7 @@ Versione: V1 - descrizione di EZElectronics nella sua forma corrente
         - [Scenario 11.1:](#scenario-111)
         - [Scenario 11.2:](#scenario-112)
         - [Scenario 11.3:](#scenario-113)
+        - [Scenario 11.4:](#scenario-114)
     - [Use case 12, UC12: Ricerca di un prodotto tramite codice identificativo](#use-case-12-uc12-ricerca-di-un-prodotto-tramite-codice-identificativo)
         - [Scenario 12.1:](#scenario-121)
     - [Use case 13, UC13: Registrazione di un prodotto](#use-case-13-uc13-registrazione-di-un-prodotto)
@@ -167,7 +168,7 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 
 ## Casi d'Uso ##
 ### Use case 1, UC1: Creazione Account ###
-| Actors Involved  |  Manager                                                             |
+| Actors Involved  | Utente                                                             |
 | :--------------: | :------------------------------------------------------------------: |
 |   Precondition   | L'utente non deve essere già registrato                              |
 |  Post condition  | L'utente è registrato e autenticato                                  |
@@ -286,7 +287,7 @@ EZElectronics (letto EaSy Electronics) è una applicazione software fatta per ai
 |       2        | Il caso d'uso termina con successo                                         |
 
 ### Use case 5, UC5: Visualizzazione dei prodotti nel carrello ###
-| Actors Coinvolti |   Cliente                                                            |
+| Actors Coinvolti | Cliente                                                              |
 | :--------------: | :------------------------------------------------------------------: |
 |   Precondition   | Il cliente è autenticato                                             |
 |  Post condition  | Nessuna                                                              |
